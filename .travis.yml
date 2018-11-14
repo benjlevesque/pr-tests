@@ -8,7 +8,7 @@ install:
   - $(npm root -g)/pr-bumper/.travis/maybe-install.sh
  
 before_script:
-  - $(npm root -g)/pr-bumper/.travis/maybe-check-scope.sh
+  - pr-bumper check
  
 script:
   - $(npm root -g)/pr-bumper/.travis/maybe-test.sh
