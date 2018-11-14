@@ -1,5 +1,5 @@
 language: node_js
-node_js: '6.11.0'
+node_js: '11.1.0'
 
 before_install:
   - npm install -g pr-bumper@^3.7.3
@@ -20,5 +20,5 @@ after_success:
 deploy:
   on:
     all_branches: true
-    node: '6.11.0'
+    node: '11.1.0'
     tags: true
