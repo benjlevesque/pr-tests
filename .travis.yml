@@ -1,21 +1,4 @@
 language: node_js
-node_js: 
-- '6.0'
-- 'stable'
-
-before_install:
-- npm install -g pr-bumper@^1.0.0
-- $(npm root -g)/pr-bumper/.travis/maybe-check-scope.sh
-
-install:
-- $(npm root -g)/pr-bumper/.travis/maybe-install.sh
 
 script:
-- $(npm root -g)/pr-bumper/.travis/maybe-test.sh
-- $(npm root -g)/pr-bumper/.travis/maybe-bump-version.sh
-
-deploy:
-  on:
-    all_branches: true
-    node: '11.1.0'
-    tags: true
+- pr-bumper bump
