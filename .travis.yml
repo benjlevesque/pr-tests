@@ -1,22 +1,14 @@
 language: node_js
-node_js: '11.1.0'
+node_js: 
+- 'stable'
 
-before_install:
-  - npm install -g pr-bumper@^3.7.3
- 
 install:
-  - $(npm root -g)/pr-bumper/.travis/maybe-install.sh
- 
-before_script:
-  - $(npm root -g)/pr-bumper/.travis/maybe-check-scope.sh
- 
+- npm install -g pr-bumper
+
 script:
-  - $(npm root -g)/pr-bumper/.travis/maybe-test.sh
-  - $(npm root -g)/pr-bumper/.travis/maybe-bump-version.sh
- 
-after_success:
-  - $(npm root -g)/pr-bumper/.travis/maybe-publish-coverage.sh
- 
+- pr-bumper bump
+
+
 deploy:
   on:
     all_branches: true
