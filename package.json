@@ -1,8 +1,0 @@
-{
-  "name": "pr-tests",
-  "version": "1.0.0",
-  "main": "index.js",
-  "repository": "git@github.com:benjlevesque/pr-tests.git",
-  "author": "Benjamin LEVESQUE <14175665+benjlevesque@users.noreply.github.com>",
-  "license": "MIT"
-}
