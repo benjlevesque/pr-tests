@@ -1,9 +1,0 @@
-language: node_js
-node_js: 
-- 'stable'
-
-deploy:
-  on:
-    all_branches: true
-    node: '11.1.0'
-    tags: true
