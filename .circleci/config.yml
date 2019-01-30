@@ -16,6 +16,9 @@ commands:
         default: 1
     steps:
       - run:
+          name: Install Ruby
+          command: sudo apt-get install ruby-full
+      - run:
           name: Install GHI
           command: |
             curl -sL https://raw.githubusercontent.com/stephencelis/ghi/master/ghi > ghi
